@@ -25,19 +25,30 @@
 </body>
 <body class="dark-theme">
 <body>
-    <img src="" alt=""/>
-    
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-    </div>
+<img src="" alt=""/>
+<div>
+    <button class="btn">Dark</button>
+</div>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<button onClick="window.location.reload();">Refresh Page</button>
+<script>
+    $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
+<h1>where is the iss</h1>
+<p>latitude: <span id="lat"></span><br/></p>
+<p>longitude: <span id="long"></span><br/></p>
 
-    <script>
-        $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
-        });
-    </script>
-    <p>hello this is where i am practicing javascript. the stats page shows you stats about some stuff like weather and space station</p>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+<h1>what is the temp in denver</h1>
+<p>temp: <span id="temp"></span><br/></p>
+
+<h1>what is the temp in fort collins</h1>
+<p>temp: <span id="temp2"></span><br/></p>
+<script src="app.js"></script>
+<noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
 </body>
 </html>
