@@ -23,10 +23,54 @@
     </div>
     <!-- -->
     <div class="wrapper">
-        <h2>Running from the police <br></h2>
+        <h2>Running From the Police <br></h2>
         <p>5/5/2022</p>
-        <audio controls>
+        <audio controls onplay="changeBackgroundOutRun()">
             <source src="runpolice.mp3" type="audio/mp3">
+        </audio>
+
+        <h2>Palm Trees <br></h2>
+        <p>2/19/2022</p>
+        <audio controls onplay="changeBackgroundPalmTrees()">
+            <source src="synth2-19.mp3" type="audio/mp3">
+        </audio>
+
+        <script type="text/javascript">
+            //catch the click
+            function catchClick(){
+                console.log("hi");
+            }
+            function changeBackgroundOutRun() {
+                document.body.style.background = 'url(OutRun.gif) no-repeat center';
+                document.body.style.backgroundSize = 'cover';
+            }
+            function changeBackgroundPalmTrees() {
+                document.body.style.background = 'url(6AK.gif) no-repeat center';
+                document.body.style.backgroundSize = 'cover';
+
+            }
+            function changeBackgroundWubs() {
+                document.body.style.background = 'url(planet.gif) no-repeat center';
+                document.body.style.backgroundSize = 'cover';
+            }
+            function changeBackgroundIntro() {
+                document.body.style.background = 'url(autodrive.gif) no-repeat center';
+                document.body.style.backgroundSize = 'cover';
+
+            }
+        </script>
+
+        <h2>Wubs<br></h2>
+        <p>2/19/2022</p>
+        <audio controls onplay="changeBackgroundWubs()">
+            <source src="wubs.mp3"
+                    type="audio/mp3"
+                    >
+        </audio>
+        <h2>Intro<br></h2>
+        <p>12/9/2021</p>
+        <audio controls onplay="changeBackgroundIntro()">
+            <source src="synthwave12-9v2.mp3" type="audio/mp3">
         </audio>
     </div>
 </section>
