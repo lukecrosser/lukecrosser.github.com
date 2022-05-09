@@ -25,35 +25,73 @@
     <div class="wrapper">
         <h2>Running From the Police <br></h2>
         <p>5/5/2022</p>
-        <audio controls onplay="changeBackgroundOutRun()">
+        <audio controls id="runPolice" onplay="changeBackgroundOutRun()">
             <source src="runpolice.mp3" type="audio/mp3">
         </audio>
 
         <h2>Palm Trees <br></h2>
         <p>2/19/2022</p>
-        <audio controls onplay="changeBackgroundPalmTrees()">
+        <audio controls id="palmTrees" onplay="changeBackgroundPalmTrees()">
             <source src="synth2-19.mp3" type="audio/mp3">
         </audio>
 
         <script type="text/javascript">
-            //catch the click
-            function catchClick(){
-                console.log("hi");
-            }
+            //grab elements ids into javascript
+            var myIntro = document.getElementById("intro");
+            var myWubs = document.getElementById("wubs");
+            var myPalmTrees = document.getElementById("palmTrees");
+            var myRunPolice = document.getElementById("runPolice");
+
             function changeBackgroundOutRun() {
+                var myIntro = document.getElementById("intro");
+                var myWubs = document.getElementById("wubs");
+                var myPalmTrees = document.getElementById("palmTrees");
+                myIntro.pause();
+                myWubs.pause();
+                myPalmTrees.pause();
+                myWubs.currentTime=0;
+                myIntro.currentTime=0;
+                myPalmTrees.currentTime=0;
                 document.body.style.background = 'url(outrun.gif) no-repeat center';
                 document.body.style.backgroundSize = 'cover';
             }
             function changeBackgroundPalmTrees() {
+                var myIntro = document.getElementById("intro");
+                var myWubs = document.getElementById("wubs");
+                var myRunPolice = document.getElementById("runPolice");
+                myIntro.pause();
+                myWubs.pause();
+                myRunPolice.pause();
+                myWubs.currentTime=0;
+                myIntro.currentTime=0;
+                myRunPolice.currentTime=0;
                 document.body.style.background = 'url(6AK.gif) no-repeat center';
                 document.body.style.backgroundSize = 'cover';
 
             }
             function changeBackgroundWubs() {
+                var myIntro = document.getElementById("intro");
+                var myPalmTrees = document.getElementById("palmTrees");
+                var myRunPolice = document.getElementById("runPolice");
+                myIntro.pause();
+                myPalmTrees.pause();
+                myRunPolice.pause();
+                myPalmTrees.currentTime=0;
+                myIntro.currentTime=0;
+                myRunPolice.currentTime=0;
                 document.body.style.background = 'url(planet.gif) no-repeat center';
                 document.body.style.backgroundSize = 'cover';
             }
             function changeBackgroundIntro() {
+                var myPalmTrees = document.getElementById("palmTrees");
+                var myWubs = document.getElementById("wubs");
+                var myRunPolice = document.getElementById("runPolice");
+                myPalmTrees.pause();
+                myWubs.pause();
+                myRunPolice.pause();
+                myWubs.currentTime=0;
+                myPalmTrees.currentTime=0;
+                myRunPolice.currentTime=0;
                 document.body.style.background = 'url(autodrive.gif) no-repeat center';
                 document.body.style.backgroundSize = 'cover';
 
@@ -62,15 +100,16 @@
 
         <h2>Wubs<br></h2>
         <p>2/19/2022</p>
-        <audio controls onplay="changeBackgroundWubs()">
+        <audio controls id="wubs" onplay="changeBackgroundWubs()">
             <source src="wubs.mp3"
                     type="audio/mp3"
                     >
         </audio>
         <h2>Intro<br></h2>
         <p>12/9/2021</p>
-        <audio controls onplay="changeBackgroundIntro()">
+        <audio controls id="intro" onplay="changeBackgroundIntro()">
             <source src="synthwave12-9v2.mp3" type="audio/mp3">
+        </audio>
         </audio>
     </div>
 </section>
