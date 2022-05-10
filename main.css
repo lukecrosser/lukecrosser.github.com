@@ -14,9 +14,14 @@
 }
 .nav-links a {
 }
+@font-face {
+    font-family: 'Retronoid'; /*a name to be used later*/
+    src: url('Retronoid-n8vY.ttf'); /*URL to font*/
+}
 /* LOGO */
 .logo {
-    font-size: 32px;
+    font-size:  50px;
+    font-family:Retronoid;
 }
 
 /* NAVBAR MENU */
@@ -63,6 +68,7 @@
 .services:hover .dropdown {
     display: block;
 }
+
 /* the * means it applies to all elements in the code  */
 * {
     color: var(--fontColor);
@@ -84,12 +90,6 @@ li {
 }
 
 /* chooses between a light theme and a dark theme */
-.light-theme {
-    --bg: var(--green);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
-}
 
 .dark-theme {
     --bg: var(--black);
