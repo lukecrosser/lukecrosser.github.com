@@ -10,18 +10,38 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #778899;
 }
+
+
 .nav-links a {
+    font-family:"VCR OSD MONO";
+    text-decoration: none;
+    list-style-type: none;
+    text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }
 @font-face {
     font-family: 'Retronoid'; /*a name to be used later*/
     src: url('Retronoid-n8vY.ttf'); /*URL to font*/
 }
+@font-face {
+    font-family: 'VCR OSD MONO'; /*a name to be used later*/
+    src: url('VCR_OSD_MONO_1.001.ttf'); /*URL to font*/
+}
 /* LOGO */
 .logo {
     font-size:  50px;
     font-family:Retronoid;
+    text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }
 
 /* NAVBAR MENU */
@@ -37,6 +57,7 @@
 }
 .menu li {
     padding: 5px 14px;
+    list-style-type: none;
 
 }
 /* DROPDOWN MENU */
@@ -72,7 +93,8 @@
 /* the * means it applies to all elements in the code  */
 * {
     color: var(--fontColor);
-    font-family: helvetica;
+    font-family:"Comic Sans MS";
+
 }
 body {
     background: var(--bg);
@@ -117,7 +139,11 @@ body, html {
 }
 
 body {
+    font-family:"Comic Sans MS ";
     background-color: #242F3F;
+    background-image:url('cJ5.gif');
+    background-position: center;
+    background-size: cover;
 }
 
 .loader {

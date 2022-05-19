@@ -2,7 +2,6 @@
 <html lang="en">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="mainwallpaper.css">
-
 <body>
 <nav class="navbar">
     <!-- LOGO -->
@@ -98,6 +97,9 @@
                 document.body.style.backgroundSize = 'cover';
 
             }
+            $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+            });
         </script>
 
         <h2>Wubs<br></h2>
@@ -114,6 +116,7 @@
         </audio>
         </audio>
     </div>
+
 </section>
 </body>
 
