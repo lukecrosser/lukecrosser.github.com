@@ -28,14 +28,14 @@
 </body>
 <body class="dark-theme">
 <body>
-
-<form action="#" onsubmit="youtubeDownload();">
-    <label for="ytlink">YT Link (shortened): </label><br>
+<p><em>Note: one redirect ad will appear when you download</em></p>
+<form  onsubmit="youtubeDownload(); return false;">
+    <label for="ytlink">YT Link shortened <em>(example: https://youtu.be/dQw4w9WgXcQ)</em></label><br>
     <input type="text" id="ytlink" name="ytlink">
     <input type="submit">
 </form>
 
-<iframe style="width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;"
+<iframe style="display: none;width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;"
         scrolling="no"
         id="linkBox" src='https://ytmp3api.cyou/button/mp3/'>
 </iframe>
@@ -45,13 +45,16 @@
 
 <script>
 
-    function youtubeDownload() {
+    async function youtubeDownload() {
+        const delay = ms => new Promise(res => setTimeout(res, ms)); //delay execution program
         const yt = document.getElementById('ytlink').value;
         console.log(yt);
         let croppedLink = "";
-        croppedLink=yt.slice(0, 0) + yt.slice(17, yt.length);
+        croppedLink = yt.slice(0, 0) + yt.slice(17, yt.length);
         document.getElementById('linkBox').src = "https://ytmp3api.cyou/button/mp3/" + croppedLink + "";
         console.log(document.getElementById('linkBox').src);
+        await delay(500);
+        document.getElementById("linkBox").style.display = "inline";
     }
 
 
