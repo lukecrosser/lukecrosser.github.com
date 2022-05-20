@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="main.css">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
@@ -8,7 +9,6 @@
     <title>Luke's document</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body class="dark-theme">
 <body>
 <nav class="navbar">
     <!-- LOGO -->
@@ -17,7 +17,6 @@
     <ul class="nav-links">
         <!-- USING CHECKBOX HACK -->
         <!-- NAVIGATION MENUS -->
-
         <div class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="stats.html">Stats</a></li>
@@ -29,32 +28,34 @@
 </body>
 <body class="dark-theme">
 <body>
-<img src="" alt=""/>
-<div>
-    <button class="btn">Dark</button>
-</div>
-<div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-</div>
-<button onClick="window.location.reload();">Refresh Page</button>
+
+<form action="#" onsubmit="youtubeDownload();">
+    <label for="ytlink">YT Link (shortened): </label><br>
+    <input type="text" id="ytlink" name="ytlink">
+    <input type="submit">
+</form>
+
+<iframe style="width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;"
+        scrolling="no"
+        id="linkBox" src='https://ytmp3api.cyou/button/mp3/'>
+</iframe>
+
+
+
+
 <script>
-    $(window).on("load",function(){
-        $(".loader-wrapper").fadeOut("slow");
-    });
+
+    function youtubeDownload() {
+        const yt = document.getElementById('ytlink').value;
+        console.log(yt);
+        let croppedLink = "";
+        croppedLink=yt.slice(0, 0) + yt.slice(17, yt.length);
+        document.getElementById('linkBox').src = "https://ytmp3api.cyou/button/mp3/" + croppedLink + "";
+        console.log(document.getElementById('linkBox').src);
+    }
+
+
+
 </script>
-<h1>where is the iss</h1>
-<p>latitude: <span id="lat"></span><br/></p>
-<p>longitude: <span id="long"></span><br/></p>
 
-<h1>what is the temp in denver</h1>
-<p>temp: <span id="temp"></span><br/></p>
-
-<h1>what is the temp in fort collins</h1>
-<p>temp: <span id="temp2"></span><br/></p>
-<script src="app.js"></script>
-
-<noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
-</body>
-</body>
-</html>
