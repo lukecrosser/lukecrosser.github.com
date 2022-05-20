@@ -144,6 +144,7 @@ body {
     background-image:url('cJ5.gif');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .loader {
