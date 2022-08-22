@@ -1,7 +1,7 @@
 /* the base colors for the website */
 :root {
     --green: #00FF00;
-    --white: #ffffff;
+    --white: #FFD580;
     --black: #000000;
 }
 /* NAVBAR STYLING STARTS */
@@ -15,6 +15,7 @@
 
 .nav-links a {
     font-family:"VCR OSD MONO";
+    color:var(--green);
     text-decoration: none;
     list-style-type: none;
     text-shadow:
@@ -36,6 +37,7 @@
 .logo {
     font-size:  50px;
     font-family:Retronoid;
+    color:var(--green);
     text-shadow:
             3px 3px 0 #000,
             -1px -1px 0 #000,
@@ -92,12 +94,13 @@
 
 /* the * means it applies to all elements in the code  */
 * {
-    color: var(--fontColor);
-    font-family:"Comic Sans MS";
+    color: var(--green);
+    font-family:"";
 
 }
 body {
     background: var(--bg);
+    color:var(--white);
 }
 ul {
     font-family: helvetica;
@@ -112,25 +115,6 @@ li {
 }
 
 /* chooses between a light theme and a dark theme */
-
-.dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
-}
-.btn {
-    position: absolute;
-    top: 120px;
-    left: 45px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-.btn:focus { outline-style: none; }
 
 
 body, html {
